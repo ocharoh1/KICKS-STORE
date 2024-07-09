@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-image: url(imaes/shoe.png);
+    background-size: cover;
+    background-position: center;
+}
+
+section nav {
+    display: flex;
+    justify-content: space-between; /* Ensure equal spacing between items */
+    align-items: center;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    position: fixed;
+    background: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 0 30px; /* Add padding for better spacing */
+}
+
+section nav .logo {
+    font-size: 35px;
+    color: #c72092;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+section nav .logo span {
+    color: #6c14d0;
+    text-decoration: underline;
+}
+
+section nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Display list items horizontally */
+    flex-grow: 1; /* Ensure it takes up available space */
+    justify-content: center; /* Center the items */
+    gap: 20px; /* Add spacing between items */
+}
+
+section nav ul li {
+    margin: 0 15px; /* Add spacing between items */
+}
+
+section nav ul li a {
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+}
+
+section nav ul li a:hover {
+    color: #c72092;
+}
+
+section nav .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Add spacing between icons */
+}
+
+section nav .icons i {
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+section nav .icons i:hover {
+    color: #c72092;
+}
+
+section .main .main_content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+section .main .main_content .main_text h1 {
+    font-size: 90px;
+    line-height: 70px;
+    font-family: pyxidium quick;
+    background: linear-gradient(to right, #c72092, #6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top: 45%;
+    left: 5%;
+}
+
+section .main .main_content .main_text p {
+    width: 600px;
+    text-align: justify;
+    line-height: 21px;
+    position: relative;
+    top: 85px;
+    left: 5px;
+}
+
+section .main .main_content .main_image img {
+    width: 565px;
+    position: relative;
+    top: 20px;
+    left: 75px;
+}
+
+section .main .social_icon {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+}
+
+section .main .social_icon i {
+    margin: 8px 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+section .main .social_icon i:hover {
+    color: #c72092;
+}
+
+section .main .button {
+    position: absolute;
+    padding: 10px 20px;
+    left: 6px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #c72092, #6c14d0);
+}
+
+section .main .button a {
+    color: white;
+    text-decoration: none;
+}
+
+section .main .button i {
+    color: white;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+section .main .button:hover i {
+    transform: translateX(6px);
+}
+
+/* Products Section */
+.products {
+    width: 100%;
+    padding: 25px 0;
+    background: white;
+    text-align: center;
+}
+
+.products h1 {
+    margin: 35px 0;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #c72092, #6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.products .box {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust columns for responsiveness */
+    gap: 25px;
+}
+
+.products .box .card {
+    box-shadow: 0 0 8px #6c14d0;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 20px;
+    background: #f6f6f6;
+    transition: 0.3s;
+    position: relative;
+}
+
+.products .box .card:hover {
+    transform: translateY(-1px);
+    color: #6c14d0;
+    
+}
+
+.products .box .card .small_card {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.products .box .card .small_card i {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.products .box .card .small_card i:hover {
+    color: #c72092;
+}
+
+.products .box .card .image {
+    margin-top: 40px;
+}
+
+.products .box .card .image img {
+    width: 150px;
+}
+
+.products .box .card .product_text {
+    margin-top: 15px;
+}
+
+.products .box .card .product_text h2 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.products .box .card .product_text p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.products .box .card .product_text h3 {
+    font-size: 20px;
+    color: #c72092;
+    margin-bottom: 10px;
+}
+
+.products .box .card .product_star {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.products .box .card .product_star i {
+    color: #ffd700;
+    margin-right: 5px;
+}
+
+.products .box .card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #c72092, #6c14d0);
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.products .box .card .btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* About us */
+.about {
+    width: 100%;
+    height: 100vh;
+    padding: 35px;
+}
+.about h1 {
+    font-size: 60px;
+    margin-top: 20PX;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about h1 span{
+    background: linear-gradient(to right, #c72092, #6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 15px;
+}
+
+.about .about_main{
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.about .about_main .about_image .about_small_image{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 15px;
+}
+.about .about_main .about_image .about_small_image img{
+    height: 92px;
+    margin: 5px 0;
+    cursor: pointer;
+    background: linear-gradient(to right, #6c14d0, #c72092);
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    opacity: 0.8;
+
+}
